@@ -1,0 +1,1 @@
+vcs -timescale=1ns/1ps +define+DATA_WIDTH=32 +define+ADDRESS_WIDTH=3 -R -sverilog fifo_design.v fifo_interface.sv fifo_package.sv fifo_tb_top.sv -ntb_opts uvm-1.2 -debug_access+all
