@@ -6,8 +6,6 @@ module fifo_tb_top;
 
   always #0.5ns clk = ~clk ;
 
-  fifo_interface #(.DATA_WIDTH(32),.ADDRESS_WIDTH(3)) fifo_intf(clk,reset);
-
   `ifdef DATA_WIDTH
   `else 
     `define DATA_WIDTH 8
@@ -18,10 +16,14 @@ module fifo_tb_top;
      `define ADDRESS_WIDTH 4
   `endif
 
-  int DATA_WID = `DATA_WIDTH;
-  int ADDRESS_WID = `ADDRESS_WIDTH;
+  parameter ADDRESS_WIDTH  = `ADDRESS_WIDTH;
+  parameter DATA_WIDTH = `DATA_WIDTH;
 
-  fifo #(.DATA_WIDTH(32), .ADDRESS_WIDTH(3))fifo_inst(
+
+  fifo_interface #(.DATA_WIDTH(DATA_WIDTH),.ADDRESS_WIDTH(ADDRESS_WIDTH)) fifo_intf(clk,reset);
+
+
+  fifo #(.DATA_WIDTH(DATA_WIDTH), .ADDRESS_WIDTH(ADDRESS_WIDTH))fifo_inst(
     .clk     (clk),
     .reset   (reset),
     .rd_en   (fifo_intf.rd_en),
