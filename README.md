@@ -35,5 +35,12 @@ Reset takes the FIFO to initial state – memory is empty and all outputs get co
 
 <img width="1257" height="820" alt="image" src="https://github.com/user-attachments/assets/5062aab2-734a-4ea4-908b-aaee50116596" />
 
+**UVM ENVIRONMENT**
+
+<img width="419" height="601" alt="image" src="https://github.com/user-attachments/assets/f6e9179c-744c-4bf9-ad9f-7563a4306e1b" />
+
+https://app.diagrams.net/#G1sruRsnAkhjHeatTK8JoLUiF5qcEoz1PP#%7B%22pageId%22%3A%227QBoo4KrJyGAO9i6XJRv%22%7D
+
+
 
 
